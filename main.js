@@ -13,12 +13,12 @@ fetch(
   .then((myData) => {
     let ratesObj = myData.rates;
     let rKeys = Object.keys(myData.rates);
-    rKeys.forEach((e) => {
+    rKeys.sort().forEach((e) => {
       let op = document.createElement("option");
       op.textContent = e;
       secondS.appendChild(op);
     });
-    rKeys.forEach((e) => {
+    rKeys.sort().forEach((e) => {
       let op = document.createElement("option");
       op.textContent = e;
       firstS.appendChild(op);
